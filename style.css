@@ -1,18 +1,36 @@
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h1 {
-    font-size: 40px;
+    text-align: center;
+    font-size: 70px;
+    color: #DDDDDD;
+    width: 600px;
+}
+
+.description {
+    text-align: center;
+    font-size: 18px;
+    width: 500px;
+    color: #DDDDDD;
 }
 
 img {
-    width: 300px;
+    width: 600px;
     height: auto;
 }
 
 .tab-container {
     display: flex;
     flex-direction: column;
+    
 }
 
 .tab-bar {
+    justify-content: center;
     display: flex;
     border-style: solid;
     border-color: #AAAAAA;
@@ -20,6 +38,7 @@ img {
 }
 
 .individual-tabs {
+    border-style: none;
     width: 90px;
     height: 50px;
     background-color: #444444;
@@ -31,7 +50,10 @@ img {
 }
 
 .drop-down-container {
-    width: auto;
-    height: 100px;
+    text-align: center;
     background-color: #AAAAAA;
+}
+
+h4 {
+    font-size: 20px;
 }
