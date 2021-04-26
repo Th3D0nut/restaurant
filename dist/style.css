@@ -6,3 +6,32 @@ img {
     width: 300px;
     height: auto;
 }
+
+.tab-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-bar {
+    display: flex;
+    border-style: solid;
+    border-color: #AAAAAA;
+    border-width: 1px;
+}
+
+.individual-tabs {
+    width: 90px;
+    height: 50px;
+    background-color: #444444;
+    color: #FFFFFF;
+}
+
+.individual-tabs:hover {
+    background-color: #555555;
+}
+
+.drop-down-container {
+    width: auto;
+    height: 100px;
+    background-color: #AAAAAA;
+}
