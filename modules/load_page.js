@@ -14,11 +14,11 @@ const loadPage = (function() {
 		" rooftop of Customs House with spectacular harbour views," +
 		" delicious burgers, an outdoor terrace, cocktail lounge and" +
 		" a relaxed, contemporary interior.";
+		description.classList.add("description");
 	
-		burgerImage.setAttribute("src" ,
-			"https://copperhillsinn.com/wp-content/uploads/sites/" +
-			"20/2020/04/burger-globe-az.jpg");
-		burgerImage.setAttribute("alt", "Two delicious burgers.");
+		document.body.style.backgroundImage = "url(" +
+			"https://copperhillsinn.com/wp-content/uploads" +
+			"/sites/20/2020/04/burger-globe-az.jpg)";
 	
 		_content.appendChild(header);
 		_content.appendChild(description);

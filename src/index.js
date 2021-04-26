@@ -7,24 +7,32 @@ tabbedBrowsing.addTabBar(2);
 const tabs = document.querySelectorAll(".individual-tabs");
 
 let toggle = false;
+let prevClicked;
 
 tabs.forEach(tab => {
     tab.addEventListener("click", (e) => {
-
-        if (!toggle && e.target.id === "tab1") {
+        let click = e.target.id;
+        
+        if (prevClicked === click && toggle) {
+            tabbedBrowsing.dropDown("remove");
+            toggle = false;
+            prevClicked = "id1";
+        } else if (!toggle && e.target.id === "tab1") {
             tabbedBrowsing.dropDown("menu");
             toggle = true;
+            prevClicked = "tab1";
         } else if (!toggle && e.target.id === "tab2") {
             tabbedBrowsing.dropDown("contact");
             toggle = true;
+            prevClicked = "tab2";
         } else if (toggle && e.target.id === "tab1") {
             tabbedBrowsing.dropDown("remove");
             tabbedBrowsing.dropDown("menu");
-            toggle = false;
+            prevClicked = "tab1";
         } else if (toggle && e.target.id === "tab2") {
             tabbedBrowsing.dropDown("remove");
             tabbedBrowsing.dropDown("contact");
-            toggle = false;
+            prevClicked = "tab2";
         }
 
     });
