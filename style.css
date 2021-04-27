@@ -5,6 +5,7 @@
 }
 
 h1 {
+    margin-top: 10px;
     text-align: center;
     font-size: 70px;
     color: #DDDDDD;
@@ -12,6 +13,7 @@ h1 {
 }
 
 .description {
+    margin-top: 10px;
     text-align: center;
     font-size: 18px;
     width: 500px;
@@ -24,17 +26,15 @@ img {
 }
 
 .tab-container {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    
 }
 
 .tab-bar {
     justify-content: center;
     display: flex;
-    border-style: solid;
-    border-color: #AAAAAA;
-    border-width: 1px;
+    border-style: none;
 }
 
 .individual-tabs {
@@ -45,15 +45,54 @@ img {
     color: #FFFFFF;
 }
 
-.individual-tabs:hover {
-    background-color: #555555;
+#tab1 {
+    border-radius: 3px 0px 0px 3px;
+}
+
+#tab2 {
+    border-radius: 0px 3px 3px 0px;
 }
 
 .drop-down-container {
     text-align: center;
-    background-color: #AAAAAA;
+    background-color: #555555;
+    border-radius: 3px;
+    opacity: 0.95;
+    color: #DDDDDD;
+}
+
+h3 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.drop-down-container img {
+    margin-top: 5px;
 }
 
 h4 {
     font-size: 20px;
+}
+
+.dropdown-contact {
+    display: flex;
+    text-align: left;
+}
+
+#adress {
+    padding: 20px 10px 10px 10px;
+}
+
+#adress h4 {
+    margin-bottom: 4px;
+}
+
+#contact {
+    padding: 20px 30px 30px 30px;
+    width: 280px;
+}
+
+#contact h4 {
+    margin-bottom: 4px;
 }
