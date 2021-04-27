@@ -14,6 +14,10 @@ const tabbedBrowsing = (function() {
         return container;
     }
 
+    function _changeColor (element, color) {
+        element.style.backgroundColor = color;
+    }
+
     function addTabBar(tabAmount) {
         const container = _addContainer();
 
@@ -24,7 +28,12 @@ const tabbedBrowsing = (function() {
             const tab = document.createElement("button");
             tab.classList.add("individual-tabs");
             tab.setAttribute("id", "tab" + (i + 1));
-
+            
+            /*tab.addEventListener("mouseover", _changeColor.bind(null,
+                tab, "#666666"));
+            tab.addEventListener("mouseout", _changeColor.bind(null, 
+                tab, "#444444"));*/
+            
             if (i === 0) {
                 tab.textContent = "Menu";
             } else if (i === 1) {
@@ -41,16 +50,21 @@ const tabbedBrowsing = (function() {
 
     function dropDown(type) {
         const tabContainer = document.querySelector(".tab-container");
+        const _menuTab = document.querySelector("#tab1");
+        const _contactTab = document.querySelector("#tab2");
 
         _dropDownContainer.classList.add("drop-down-container");
         if (type === "menu") {
+            _contactTab.style.backgroundColor = "#444444";
+            _menuTab.style.backgroundColor = "#555555";
             dropContent(_dropDownContainer, "menu");
         } else if (type === "contact") {
+            _menuTab.style.backgroundColor = "#444444";
+            _contactTab.style.backgroundColor = "#555555";
             dropContent(_dropDownContainer, "contact");
         }
 
         if (type === "remove") {
-            console.log(_dropDownContainer);
             tabContainer.removeChild(_dropDownContainer);
         } else {
             tabContainer.appendChild(_dropDownContainer);

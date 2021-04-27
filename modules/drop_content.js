@@ -18,13 +18,19 @@ function dropContent(selector, type) {
         "_3O15h8K1S1CMktOWgmWpsSKOM=s1000'>";
     } else {
         selector.innerHTML =
-        "<h4>Adress: </h4>" +
+        "<div class='dropdown-contact'>" +
+        "<div id='adress'>" +
+        "<h4>Adress:</h4>" +
         "<p>Street: Bigstreet 20<br>" +
         "Postcode: 5109 RT<br>" +
         "City: Innsbruck</p>" +
+        "</div>" +
+        "<div id='contact'>" +
         "<h4>Contact:</h4>" +
         "<p>Phone: 020 9384 3728<br>" +
         "Email: beefysleezys@bigbeef.com</p>";
+        "</div>" +
+        "</div>"
     }
 
 }

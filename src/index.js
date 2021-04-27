@@ -5,6 +5,8 @@ loadPage.home();
 tabbedBrowsing.addTabBar(2);
 
 const tabs = document.querySelectorAll(".individual-tabs");
+const menuTab = document.querySelector("#tab1");
+const contactTab = document.querySelector("#tab2");
 
 let toggle = false;
 let prevClicked;
@@ -14,6 +16,8 @@ tabs.forEach(tab => {
         let click = e.target.id;
         
         if (prevClicked === click && toggle) {
+            menuTab.style.backgroundColor = "#444444";
+            contactTab.style.backgroundColor = "#444444";
             tabbedBrowsing.dropDown("remove");
             toggle = false;
             prevClicked = "id1";
